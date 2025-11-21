@@ -24,41 +24,37 @@ The system uses:
 Ensure your laptop is connected to the Turtlebot4 using a **LAN cable**.
 
 SSH into the robot:
-
-ssh ubuntu@192.168.185.3
+- ssh ubuntu@192.168.185.3
 
 # 2. Build Workspace & Install Dependencies
 2.1 Create ws
+- mkdir -p kelompok1/src
 
-2.2 mkdir -p kelompok1/src
-
-2.3 cd kelompok1
+- cd kelompok1
 
 2.2 Clone repo
-git clone https://github.com/Rusaven/turtlebot4_pickAndPlace.git
+- git clone https://github.com/Rusaven/turtlebot4_pickAndPlace.git
 
 2.3 Install Dependencies
-cd ../
-rosdep install --from-paths src --ignore-src -r -y
+- cd ../
+- rosdep install --from-paths src --ignore-src -r -y
 
 2.4 Build ws
-colcon build
+- colcon build
 
 # 3. Load map + AMCL
-ros2 launch turtlebot4_navigation localization.launch.py map:=Mapping_Kelompok1APagiUTS.yaml params:=localization.yaml
+- ros2 launch turtlebot4_navigation localization.launch.py map:=Mapping_Kelompok1APagiUTS.yaml params:=localization.yaml
 
 # 4 Launch nav
-ros2 launch turtlebot4_pick_place uts_nav.launch.py
+- ros2 launch turtlebot4_pick_place uts_nav.launch.py
 
 # 5. Open RViz
-ros2 launch turtlebot4_viz view_navigation.launch.py
+- ros2 launch turtlebot4_viz view_navigation.launch.py
 
 # 6. Run pick and place program
-6.1 cd kelompok1
-
-6.2 source install/setup.bash
-
-6.3 ros2 run uts uts
+- cd kelompok1
+- source install/setup.bash
+- ros2 run uts uts
 
 ---
 
