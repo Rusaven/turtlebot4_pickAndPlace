@@ -29,3 +29,33 @@ ssh ubuntu@192.168.185.3
 
 # 2. Build Workspace & Install Dependencies
 2.1 Create ws
+mkdir -p kelompok1/src
+cd kelompok1
+
+2.2 Clone repo
+git clone https://github.com/Rusaven/turtlebot4_pickAndPlace.git
+
+2.3 Install Dependencies
+cd ../
+rosdep install --from-paths src --ignore-src -r -y
+
+2.4 Build ws
+colcon build
+
+# 3. Load map + AMCL
+ros2 launch turtlebot4_navigation localization.launch.py map:=Mapping_Kelompok1APagiUTS.yaml params:=localization.yaml
+
+# 4 Launch nav
+ros2 launch turtlebot4_pick_place uts_nav.launch.py
+
+# 5. Open RViz
+ros2 launch turtlebot4_viz view_navigation.launch.py
+
+# 6. Run pick and place program
+cd kelompok1
+source install/setup.bash
+ros2 run uts uts
+
+---
+
+Demo : https://youtu.be/H8caqi7VKDY 
