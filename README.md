@@ -5,14 +5,14 @@
 ---
 
 ## Project Overview
-This project involves programming a Turtlebot4 robot to autonomously pick up an item from **Room 203** and deliver it to **Lobby BRAIL**.  
+This project involves programming a Turtlebot4 robot to autonomously go to pick up point at **Room 203** and going back to **Lobby BRAIL**.  
 The system uses:
 
 - **ROS2 Navigation (Nav2)**
 - **SLAM Toolbox (Mapping)**
 - **AMCL (Localization)**
 - **Autonomous multi-waypoint navigation**
-- **Buzzer/Speaker notification**
+- **Buzzer/Speaker as notification**
 
 ### Buzzer Logic
 - **1 beep** → Robot reaches **Pick Point (Room 203)**  
