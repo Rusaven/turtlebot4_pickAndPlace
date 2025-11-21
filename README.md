@@ -20,13 +20,13 @@ The system uses:
 
 ---
 
-# 1. Connect to Turtlebot4
+## 1. Connect to Turtlebot4
 Ensure your laptop is connected to the Turtlebot4 using a **LAN cable**.
 
 SSH into the robot:
 - ssh ubuntu@192.168.185.3
 
-# 2. Build Workspace & Install Dependencies
+## 2. Build Workspace & Install Dependencies
 2.1 Create ws
 - mkdir -p kelompok1/src
 
@@ -42,16 +42,16 @@ SSH into the robot:
 2.4 Build ws
 - colcon build
 
-# 3. Load map + AMCL
+## 3. Load map + AMCL
 - ros2 launch turtlebot4_navigation localization.launch.py map:=Mapping_Kelompok1APagiUTS.yaml params:=localization.yaml
 
-# 4 Launch nav
+## 4 Launch nav
 - ros2 launch turtlebot4_pick_place uts_nav.launch.py
 
-# 5. Open RViz
+## 5. Open RViz
 - ros2 launch turtlebot4_viz view_navigation.launch.py
 
-# 6. Run pick and place program
+## 6. Run pick and place program
 - cd kelompok1
 - source install/setup.bash
 - ros2 run uts uts
