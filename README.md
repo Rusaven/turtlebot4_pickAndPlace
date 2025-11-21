@@ -55,7 +55,9 @@ ros2 launch turtlebot4_viz view_navigation.launch.py
 
 # 6. Run pick and place program
 6.1 cd kelompok1
+
 6.2 source install/setup.bash
+
 6.3 ros2 run uts uts
 
 ---
